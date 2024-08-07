@@ -578,7 +578,7 @@ open class UIElement {
 
     // Gets the element at the specified coordinates.
     // This can only be called on applications and the system-wide element, so it is internal here.
-    func elementAtPosition(_ x: Float, _ y: Float) throws -> UIElement? {
+    public func elementAtPosition(_ x: Float, _ y: Float) throws -> UIElement? {
         var result: AXUIElement?
         let error = AXUIElementCopyElementAtPosition(element, x, y, &result)
 
